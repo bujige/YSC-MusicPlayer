@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  音乐播放器
+//
+//  Created by YangLunlong on 16/5/15.
+//  Copyright © 2016年 lianai911. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+YSCExtension.h"
+#import "UIBarButtonItem+YSCExtension.h"
+#ifdef DEBUG
+#define YSCLog(...) NSLog(__VA_ARGS__)
+#else
+#define YSCLog(...)
+#endif
+#define YSCLogFunc YSCLog(@"%s",__func__);
+#define YSCRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define YSCGlobalBg YSCRGBColor(223,223,223)
+
+#endif /* PrefixHeader_pch */

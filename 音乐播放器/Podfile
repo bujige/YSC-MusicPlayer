@@ -1,0 +1,9 @@
+platform :ios, "6.0"
+
+pod "BmobSDK"
+pod "AFNetworking"
+pod "SDWebImage"
+pod "SVProgressHUD"
+pod "MJExtension"
+pod "MJRefresh"
+pod "Masonry"

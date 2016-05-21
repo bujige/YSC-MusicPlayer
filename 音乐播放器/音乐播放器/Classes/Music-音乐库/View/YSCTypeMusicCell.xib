@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="YSCTypeMusicCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-iR-n6M" userLabel="歌曲图">
+                        <rect key="frame" x="10" y="10" width="66" height="66"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="5bB-pN-5cS"/>
+                            <constraint firstAttribute="height" constant="66" id="X8I-qf-4tV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-Q5-J9f" userLabel="歌手">
+                        <rect key="frame" x="106" y="10" width="204" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-O2-3d8" userLabel="歌名">
+                        <rect key="frame" x="106" y="55" width="204" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-Qf-Jce">
+                        <rect key="frame" x="259" y="25" width="46" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="2YB-2k-ovh"/>
+                            <constraint firstAttribute="height" constant="40" id="L3r-xY-9sk"/>
+                        </constraints>
+                        <state key="normal" title="Button" backgroundImage="favorite"/>
+                        <connections>
+                            <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VsB-Yb-hoG"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0Wg-Qf-Jce" secondAttribute="trailing" constant="15" id="400-Zv-9Yt"/>
+                    <constraint firstItem="jXb-O2-3d8" firstAttribute="bottom" secondItem="d5A-iR-n6M" secondAttribute="bottom" id="HIT-A8-M8R"/>
+                    <constraint firstItem="mcn-Q5-J9f" firstAttribute="top" secondItem="d5A-iR-n6M" secondAttribute="top" id="HIv-1P-pnl"/>
+                    <constraint firstItem="jXb-O2-3d8" firstAttribute="trailing" secondItem="mcn-Q5-J9f" secondAttribute="trailing" id="Jdd-Kh-KPr"/>
+                    <constraint firstItem="mcn-Q5-J9f" firstAttribute="leading" secondItem="d5A-iR-n6M" secondAttribute="trailing" constant="30" id="TbZ-Ym-qkS"/>
+                    <constraint firstItem="jXb-O2-3d8" firstAttribute="leading" secondItem="mcn-Q5-J9f" secondAttribute="leading" id="YyG-9b-hXp"/>
+                    <constraint firstItem="d5A-iR-n6M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dnL-2b-KzV"/>
+                    <constraint firstAttribute="trailing" secondItem="mcn-Q5-J9f" secondAttribute="trailing" constant="10" id="gDU-qA-I4w"/>
+                    <constraint firstItem="d5A-iR-n6M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kxO-qp-x1w"/>
+                    <constraint firstItem="0Wg-Qf-Jce" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oWv-4s-nwq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="musicImage" destination="d5A-iR-n6M" id="krK-0g-Guk"/>
+                <outlet property="musicSinger" destination="mcn-Q5-J9f" id="O2K-94-2NI"/>
+                <outlet property="musicTitle" destination="jXb-O2-3d8" id="vUr-yW-wXm"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="303"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="favorite" width="62" height="65"/>
+    </resources>
+</document>
