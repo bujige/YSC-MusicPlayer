@@ -33,6 +33,13 @@
                             <constraint firstAttribute="width" constant="66" id="yTF-Ht-w6G"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5x-uG-sS9">
+                        <rect key="frame" x="247" y="33" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="cancelFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="28b-GF-2EJ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="UNq-oD-eJE" firstAttribute="top" secondItem="hg1-v0-IlV" secondAttribute="top" id="0EL-NR-bt1"/>

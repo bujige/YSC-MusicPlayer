@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *musicSinger;
 
 @property (weak, nonatomic) IBOutlet UILabel *musicTitle;
+- (IBAction)cancelFavorite:(id)sender;
 
 @end
 
@@ -41,4 +42,6 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)cancelFavorite:(id)sender {
+}
 @end
