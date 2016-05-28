@@ -8,6 +8,7 @@
 
 #import "YSCLoveCell.h"
 #import "YSCLove.h"
+#import <BmobSDK/Bmob.h>
 #import <UIImageView+WebCache.h>
 
 @interface YSCLoveCell()
@@ -43,5 +44,38 @@
 }
 
 - (IBAction)cancelFavorite:(id)sender {
+//    BmobUser *bUser = [BmobUser getCurrentUser];
+//    if (bUser) {
+//        NSString *bUserObjectId = [NSString stringWithFormat:@"%@",bUser.objectId];
+//        BmobObject *user = [BmobObject objectWithoutDatatWithClassName:@"_User" objectId:bUserObjectId];
+//        
+//        BmobQuery  *bquery = [BmobQuery queryWithClassName:@"Music"];
+//        
+//        [bquery whereKey:@"songId" equalTo:self.typeMusic.songId];
+//        BmobRelation *relation = [[BmobRelation alloc] init];
+//        [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+//            for (BmobObject *obj in array) {
+//                // 得到 songId 对应的音乐行 obj   user对应行 bUser
+//                [relation addObject:obj];
+//                
+//                [user addRelation:relation forKey:@"likes"];
+//                //异步更新obj的数据
+//                [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+//                    if (isSuccessful) {
+//                        NSLog(@"successful");
+//                    }else{
+//                        NSLog(@"error %@",[error description]);
+//                    }
+//                }];
+//            }
+//        }];
+//        
+//        self.favoriteBtn.selected = YES;
+//    
+//    }else{
+//        YSCLog(@"请登录后再收藏");
+//    }
+
+    
 }
 @end

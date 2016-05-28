@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930DFBD51CF7C72A0029811A /* YSCEditMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930DFBD31CF7C72A0029811A /* YSCEditMeViewController.m */; };
+		930DFBD61CF7C72A0029811A /* YSCEditMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930DFBD41CF7C72A0029811A /* YSCEditMeViewController.xib */; };
 		932887BE1CE7290500F9769D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932887BD1CE7290500F9769D /* Assets.xcassets */; };
 		932887C11CE7290500F9769D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932887BF1CE7290500F9769D /* LaunchScreen.storyboard */; };
 		932887CC1CE7290500F9769D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 932887CB1CE7290500F9769D /* _____Tests.m */; };
@@ -102,6 +104,9 @@
 /* Begin PBXFileReference section */
 		03C92989764466D02D4E4F8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		087ECA595D4DA3B8043DB3A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		930DFBD21CF7C72A0029811A /* YSCEditMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCEditMeViewController.h; sourceTree = "<group>"; };
+		930DFBD31CF7C72A0029811A /* YSCEditMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCEditMeViewController.m; sourceTree = "<group>"; };
+		930DFBD41CF7C72A0029811A /* YSCEditMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSCEditMeViewController.xib; sourceTree = "<group>"; };
 		932887AE1CE7290500F9769D /* 音乐播放器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "音乐播放器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		932887BD1CE7290500F9769D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		932887C01CE7290500F9769D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -431,6 +436,9 @@
 				93B8ACBF1CEB616E007A5472 /* YSCLoginRegisterViewController.h */,
 				93B8ACC01CEB616E007A5472 /* YSCLoginRegisterViewController.m */,
 				93B8ACC11CEB616E007A5472 /* YSCLoginRegisterViewController.xib */,
+				930DFBD21CF7C72A0029811A /* YSCEditMeViewController.h */,
+				930DFBD31CF7C72A0029811A /* YSCEditMeViewController.m */,
+				930DFBD41CF7C72A0029811A /* YSCEditMeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -718,6 +726,7 @@
 				93A7AD881CE88B6C00B1C865 /* YSCTypeCell.xib in Resources */,
 				93A7AD951CE9A20600B1C865 /* YSCTypeMusicController.xib in Resources */,
 				936682861CE879B600147EE2 /* YSCDiscoveryController.xib in Resources */,
+				930DFBD61CF7C72A0029811A /* YSCEditMeViewController.xib in Resources */,
 				93A7ADA21CE9B66B00B1C865 /* YSCPlayingController.xib in Resources */,
 				9366828B1CE879CE00147EE2 /* YSCMeController.xib in Resources */,
 				932887C11CE7290500F9769D /* LaunchScreen.storyboard in Resources */,
@@ -813,6 +822,7 @@
 				93A7ADB51CE9D59400B1C865 /* YSCLrcCell.m in Sources */,
 				93A7ADC01CE9D5C800B1C865 /* YSCLrcTool.m in Sources */,
 				93A7AD941CE9A20600B1C865 /* YSCTypeMusicController.m in Sources */,
+				930DFBD51CF7C72A0029811A /* YSCEditMeViewController.m in Sources */,
 				9347CFCD1CEC112C00F94499 /* YSCTextField.m in Sources */,
 				93A7ADC11CE9D5C800B1C865 /* YSCMusicTool.m in Sources */,
 				93A7AD8B1CE8C5FB00B1C865 /* YSCType.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "YSCMeController.h"
+#import "YSCEditMeViewController.h"
 #import "YSCLoginRegisterViewController.h"
 #import <BmobSDK/Bmob.h>
 
@@ -16,6 +17,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *acountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *loginRegisterOutlet;
 @property (weak, nonatomic) IBOutlet UIView *acountOutlet;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 
 @end
 
@@ -45,12 +54,14 @@
 {
     [super viewWillAppear:animated];
     
+    
     [self acountSetup];
 }
 
 - (void)settingClick
 {
-    YSCLogFunc;
+    YSCEditMeViewController *editMeVC = [[YSCEditMeViewController alloc] init];
+    [self.navigationController pushViewController:editMeVC animated:YES];
 }
 
 - (void)acountSetup
@@ -58,6 +69,7 @@
     BmobUser *bUser = [BmobUser getCurrentUser];
     if (bUser) {
         //进行操作
+        [self updateAcount:bUser];
         self.loginRegisterOutlet.hidden = YES;
         self.acountOutlet.hidden = NO;
     }else{
@@ -65,6 +77,18 @@
         self.acountOutlet.hidden = YES;
         self.loginRegisterOutlet.hidden = NO;
     }
+}
+
+- (void)updateAcount:(BmobUser *)bUser
+{
+    self.nameLabel.text = [bUser objectForKey:@"name"];
+    NSLog(@"%@",[bUser objectForKey:@"name"]);
+    self.phoneNumberLabel.text = [bUser objectForKey:@"mobilePhoneNumber"];
+    
+    NSNumberFormatter *ageFormatter = [[NSNumberFormatter alloc] init];
+    
+    self.ageLabel.text = [ageFormatter stringFromNumber:[bUser objectForKey:@"age"]];
+    self.emailLabel.text = [bUser objectForKey:@"email"];
 }
 - (IBAction)loginRegister {
     YSCLoginRegisterViewController *login = [[YSCLoginRegisterViewController alloc] init];

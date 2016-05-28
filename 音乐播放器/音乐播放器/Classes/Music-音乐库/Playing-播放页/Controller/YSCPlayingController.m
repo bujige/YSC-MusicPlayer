@@ -118,13 +118,7 @@
     self.songLabel.text = self.typeMusic.title;     //playingMusic.name;
     self.singerLabel.text = self.typeMusic.singer;  // playingMusic.singer;
 
-//    停止分类音乐——已在[YSCAudioTool stopAllMusic]中实现
-//    for (YSCTypeMusic *obj in self.type) {
-//        if (obj) {
-//            [YSCAudioTool stopMusicWithSongId:obj.songId songFile:obj.songFile];
-//        }
-//    }
-   
+
     AVPlayer *currentPlayer = [YSCAudioTool playMusicWithSongId:self.typeMusic.songId songFile:self.typeMusic.songFile];
     self.totalTimeLabel.text = [NSString stringWithCMTime:currentPlayer.currentItem.asset.duration];
     self.currentTimeLabel.text = [NSString stringWithCMTime:currentPlayer.currentTime];

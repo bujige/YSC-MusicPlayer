@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *musicTitle;
 
+@property (weak, nonatomic) IBOutlet UIButton *favoriteBtn;
+
 - (IBAction)favorite:(id)sender;
 
 @end
@@ -72,7 +74,9 @@
                 }];
             }
         }];
-    
+        
+        self.favoriteBtn.selected = YES;
+        
     }else{
         YSCLog(@"请登录后再收藏");
     }

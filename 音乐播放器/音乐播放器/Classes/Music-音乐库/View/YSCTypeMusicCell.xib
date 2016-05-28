@@ -39,7 +39,8 @@
                             <constraint firstAttribute="width" constant="46" id="2YB-2k-ovh"/>
                             <constraint firstAttribute="height" constant="40" id="L3r-xY-9sk"/>
                         </constraints>
-                        <state key="normal" title="Button" backgroundImage="favorite"/>
+                        <state key="normal" backgroundImage="favorite"/>
+                        <state key="selected" backgroundImage="home"/>
                         <connections>
                             <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VsB-Yb-hoG"/>
                         </connections>
@@ -59,6 +60,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="favoriteBtn" destination="0Wg-Qf-Jce" id="l0h-bC-Ieo"/>
                 <outlet property="musicImage" destination="d5A-iR-n6M" id="krK-0g-Guk"/>
                 <outlet property="musicSinger" destination="mcn-Q5-J9f" id="O2K-94-2NI"/>
                 <outlet property="musicTitle" destination="jXb-O2-3d8" id="vUr-yW-wXm"/>
@@ -68,5 +70,6 @@
     </objects>
     <resources>
         <image name="favorite" width="62" height="65"/>
+        <image name="home" width="59" height="66"/>
     </resources>
 </document>
