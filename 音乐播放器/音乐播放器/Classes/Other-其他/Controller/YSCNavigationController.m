@@ -17,6 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationBar.barTintColor = [UIColor colorWithRed:243/255.0 green:232/255.0 blue:99/255.0 alpha:1.0];
+    [self.navigationBar setTranslucent:NO];
+    self.view.backgroundColor = [UIColor colorWithRed:243/255.0 green:232/255.0 blue:99/255.0 alpha:1.0];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
 }
 
@@ -26,11 +35,11 @@
     if (self.childViewControllers.count > 0) {
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [button setTitle:@"返回" forState:(UIControlStateNormal)];
-//        [button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-//        [button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-        //        button.size = CGSizeMake(100, 30);
-        //        button.contentMode = UIViewContentModeLeft;
-        //让按钮内部的所有内容左对齐
+        [button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+                button.size = CGSizeMake(100, 30);
+                button.contentMode = UIViewContentModeLeft;
+//        让按钮内部的所有内容左对齐
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [button sizeToFit];

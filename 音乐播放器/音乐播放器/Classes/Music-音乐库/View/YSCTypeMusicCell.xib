@@ -33,14 +33,17 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-Qf-Jce">
-                        <rect key="frame" x="259" y="25" width="46" height="40"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-Qf-Jce">
+                        <rect key="frame" x="265" y="25" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="46" id="2YB-2k-ovh"/>
+                            <constraint firstAttribute="width" constant="40" id="2YB-2k-ovh"/>
                             <constraint firstAttribute="height" constant="40" id="L3r-xY-9sk"/>
                         </constraints>
-                        <state key="normal" backgroundImage="favorite"/>
-                        <state key="selected" backgroundImage="home"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="收藏" backgroundImage="YSCFavourite"/>
+                        <state key="selected" title="已收藏" backgroundImage="YSCFavouriteClick"/>
+                        <state key="highlighted" backgroundImage="YSCFavouriteClick"/>
                         <connections>
                             <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VsB-Yb-hoG"/>
                         </connections>
@@ -69,7 +72,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favorite" width="62" height="65"/>
-        <image name="home" width="59" height="66"/>
+        <image name="YSCFavourite" width="40" height="40"/>
+        <image name="YSCFavouriteClick" width="40" height="40"/>
     </resources>
 </document>

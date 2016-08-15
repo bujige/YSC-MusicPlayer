@@ -32,4 +32,6 @@
 /** 歌曲id */
 @property (nonatomic, copy) NSString *songId;
 
+/* objectId */
+@property (nonatomic, copy) NSString *objectId;
 @end

@@ -26,6 +26,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+
+
 @end
 
 @implementation YSCMeController
@@ -33,18 +36,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self acountSetup];
+    
     [self setup];
 }
 
 - (void)setup
 {
     // 设置导航栏标题
-    self.navigationItem.title = @"我的";
+    self.navigationItem.title = @"我";
     
     // 设置导航栏右边的按钮
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     
-    self.navigationItem.rightBarButtonItems = @[settingItem];
+    self.navigationItem.leftBarButtonItems = @[settingItem];
     
     // 设置背景色
     self.view.backgroundColor = YSCGlobalBg;
@@ -54,6 +59,13 @@
 {
     [super viewWillAppear:animated];
     
+    
+    [self acountSetup];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     [self acountSetup];
 }
@@ -82,8 +94,9 @@
 - (void)updateAcount:(BmobUser *)bUser
 {
     self.nameLabel.text = [bUser objectForKey:@"name"];
+    self.userNameLabel.text = [bUser objectForKey:@"username"];
     NSLog(@"%@",[bUser objectForKey:@"name"]);
-    self.phoneNumberLabel.text = [bUser objectForKey:@"mobilePhoneNumber"];
+    self.phoneNumberLabel.text = [bUser objectForKey:@"phoneNumber"];
     
     NSNumberFormatter *ageFormatter = [[NSNumberFormatter alloc] init];
     

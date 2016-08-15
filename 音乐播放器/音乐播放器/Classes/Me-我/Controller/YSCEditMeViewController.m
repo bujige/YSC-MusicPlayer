@@ -7,6 +7,7 @@
 //
 
 #import "YSCEditMeViewController.h"
+#import "YSCMeController.h"
 #import "YSCTextField.h"
 #import <BmobSDK/Bmob.h>
 
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet YSCTextField *age;
 
 @property (weak, nonatomic) IBOutlet YSCTextField *email;
+
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 - (IBAction)finishEdit:(id)sender;
 
@@ -42,6 +45,7 @@
         self.name.placeholder = [bUser objectForKey:@"name"];
         self.phoneNumber.placeholder = [bUser objectForKey:@"phoneNumber"];
         self.email.placeholder = [bUser objectForKey:@"email"];
+        self.usernameLabel.text = [bUser objectForKey:@"username"];
         
         NSNumberFormatter *ageFormatter = [[NSNumberFormatter alloc] init];
         self.age.placeholder = [ageFormatter stringFromNumber:[bUser objectForKey:@"age"]];
@@ -78,6 +82,8 @@
     [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         NSLog(@"error %@",[error description]);
     }];
+    
+//    YSCMeController *me= [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

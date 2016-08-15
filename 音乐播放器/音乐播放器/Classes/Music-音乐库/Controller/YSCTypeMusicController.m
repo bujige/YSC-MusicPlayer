@@ -30,10 +30,22 @@ static NSString * const YSCTypeMusicCellId = @"typeMusic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setup];
 
     [self setupTableView];
     
     [self loadNewTypes];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadNewTypes];
+    
+    [self.tableView reloadData];
 }
 
 - (NSMutableArray *)typeMusics
@@ -43,6 +55,17 @@ static NSString * const YSCTypeMusicCellId = @"typeMusic";
     }
     return _typeMusics;
 }
+
+- (void)setup
+{
+    // 设置导航栏标题
+    self.navigationItem.title = self.type.name;
+    
+    // 设置背景色
+    self.view.backgroundColor = YSCGlobalBg;
+    
+}
+
 
 - (void)setupTableView
 {
@@ -82,7 +105,32 @@ static NSString * const YSCTypeMusicCellId = @"typeMusic";
             typeMusic.lyric = (BmobFile*)[obj objectForKey:@"lyricFile"];
             typeMusic.lyricFile = typeMusic.lyric.url;
             typeMusic.lyric.name = [[NSString alloc] initWithFormat:@"%@.lrc",typeMusic.songId];
-
+            
+            BmobUser *bUser = [BmobUser getCurrentUser];
+            if (bUser) {
+                BmobQuery *bquery = [BmobQuery queryWithClassName:@"LikeMusic"];
+                
+                [bquery whereObjectKey:@"likes" relatedTo:bUser];
+                
+                //按updatedAt进行降序排列
+                [bquery orderByDescending:@"singer"];
+                
+                [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+                    if (error) {
+                        NSLog(@"%@",error);
+                    } else {
+                        for (BmobObject *objC in array) {
+                            if ([obj.objectId isEqualToString:objC.objectId]) {
+                                typeMusic.isLike = YES;
+                                break;
+                            } else {
+                                typeMusic.isLike = NO;
+                            }
+                        }
+                    }
+                }];
+            }
+            
             [self.typeMusics addObject:typeMusic];
         }
         [self.tableView reloadData];

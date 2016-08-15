@@ -36,10 +36,24 @@ static NSString * const YSCTypeCellId = @"type";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setup];
+    
     [self setupTableView];
  
     [self loadNewTypes];
 }
+
+
+- (void)setup
+{
+    // 设置导航栏标题
+    self.navigationItem.title = @"音乐库";
+    
+    // 设置背景色
+    self.view.backgroundColor = YSCGlobalBg;
+    
+}
+
 
 - (void)setupTableView
 {

@@ -8,6 +8,7 @@
 
 #import "YSCTypeCell.h"
 #import "YSCType.h"
+#import <BmobSDK/Bmob.h>
 #import <UIImageView+WebCache.h>
 
 @interface YSCTypeCell()
@@ -39,7 +40,18 @@
     self.typeName.text = type.name;
     self.typeDing.text = type.ding;
     self.typeText.text = type.text;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    static CGFloat margin = 10;
     
+    frame.origin.x = margin;
+    frame.size.width -= 2 * margin;
+    frame.size.height -= margin;
+    frame.origin.y += margin;
+    
+    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

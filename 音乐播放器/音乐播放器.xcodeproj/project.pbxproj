@@ -44,6 +44,9 @@
 		9366828F1CE879EA00147EE2 /* YSCMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9366828D1CE879EA00147EE2 /* YSCMusicController.m */; };
 		936682901CE879EA00147EE2 /* YSCMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9366828E1CE879EA00147EE2 /* YSCMusicController.xib */; };
 		936682931CE87B2B00147EE2 /* YSCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 936682921CE87B2B00147EE2 /* YSCTabBar.m */; };
+		938034781D01709F001AAED9 /* YSCDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 938034771D01709F001AAED9 /* YSCDiscovery.m */; };
+		9380347C1D0170F3001AAED9 /* YSCDiscoveryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9380347A1D0170F3001AAED9 /* YSCDiscoveryCell.m */; };
+		9380347D1D0170F3001AAED9 /* YSCDiscoveryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9380347B1D0170F3001AAED9 /* YSCDiscoveryCell.xib */; };
 		93A7AD7E1CE87DBC00B1C865 /* UIView+YSCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A7AD7D1CE87DBC00B1C865 /* UIView+YSCExtension.m */; };
 		93A7AD871CE88B6C00B1C865 /* YSCTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A7AD851CE88B6C00B1C865 /* YSCTypeCell.m */; };
 		93A7AD881CE88B6C00B1C865 /* YSCTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A7AD861CE88B6C00B1C865 /* YSCTypeCell.xib */; };
@@ -160,6 +163,11 @@
 		9366828E1CE879EA00147EE2 /* YSCMusicController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSCMusicController.xib; sourceTree = "<group>"; };
 		936682911CE87B2B00147EE2 /* YSCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCTabBar.h; sourceTree = "<group>"; };
 		936682921CE87B2B00147EE2 /* YSCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCTabBar.m; sourceTree = "<group>"; };
+		938034761D01709F001AAED9 /* YSCDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCDiscovery.h; sourceTree = "<group>"; };
+		938034771D01709F001AAED9 /* YSCDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCDiscovery.m; sourceTree = "<group>"; };
+		938034791D0170F3001AAED9 /* YSCDiscoveryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCDiscoveryCell.h; sourceTree = "<group>"; };
+		9380347A1D0170F3001AAED9 /* YSCDiscoveryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCDiscoveryCell.m; sourceTree = "<group>"; };
+		9380347B1D0170F3001AAED9 /* YSCDiscoveryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSCDiscoveryCell.xib; sourceTree = "<group>"; };
 		93A7AD7C1CE87DBC00B1C865 /* UIView+YSCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSCExtension.h"; sourceTree = "<group>"; };
 		93A7AD7D1CE87DBC00B1C865 /* UIView+YSCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSCExtension.m"; sourceTree = "<group>"; };
 		93A7AD7F1CE87E0100B1C865 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -406,6 +414,8 @@
 		936682631CE86F3A00147EE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				938034761D01709F001AAED9 /* YSCDiscovery.h */,
+				938034771D01709F001AAED9 /* YSCDiscovery.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,6 +423,9 @@
 		936682641CE86F3A00147EE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				938034791D0170F3001AAED9 /* YSCDiscoveryCell.h */,
+				9380347A1D0170F3001AAED9 /* YSCDiscoveryCell.m */,
+				9380347B1D0170F3001AAED9 /* YSCDiscoveryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -685,6 +698,7 @@
 				TargetAttributes = {
 					932887AD1CE7290500F9769D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = CCBX4CAVF4;
 					};
 					932887C61CE7290500F9769D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -731,6 +745,7 @@
 				9366828B1CE879CE00147EE2 /* YSCMeController.xib in Resources */,
 				932887C11CE7290500F9769D /* LaunchScreen.storyboard in Resources */,
 				932887BE1CE7290500F9769D /* Assets.xcassets in Resources */,
+				9380347D1D0170F3001AAED9 /* YSCDiscoveryCell.xib in Resources */,
 				9347CFF21CECB2D800F94499 /* YSCLoveCell.xib in Resources */,
 				93A7AD9A1CE9A6F600B1C865 /* YSCTypeMusicCell.xib in Resources */,
 				9347CFED1CECB11A00F94499 /* YSCLoveController.xib in Resources */,
@@ -814,6 +829,7 @@
 				936682851CE879B600147EE2 /* YSCDiscoveryController.m in Sources */,
 				9347CFF11CECB2D800F94499 /* YSCLoveCell.m in Sources */,
 				93A7AD871CE88B6C00B1C865 /* YSCTypeCell.m in Sources */,
+				938034781D01709F001AAED9 /* YSCDiscovery.m in Sources */,
 				93A7ADC71CE9D5E600B1C865 /* YSCMusic.m in Sources */,
 				9347CFF51CECB2EE00F94499 /* YSCLove.m in Sources */,
 				93A7ADA11CE9B66B00B1C865 /* YSCPlayingController.m in Sources */,
@@ -825,6 +841,7 @@
 				930DFBD51CF7C72A0029811A /* YSCEditMeViewController.m in Sources */,
 				9347CFCD1CEC112C00F94499 /* YSCTextField.m in Sources */,
 				93A7ADC11CE9D5C800B1C865 /* YSCMusicTool.m in Sources */,
+				9380347C1D0170F3001AAED9 /* YSCDiscoveryCell.m in Sources */,
 				93A7AD8B1CE8C5FB00B1C865 /* YSCType.m in Sources */,
 				9366828A1CE879CE00147EE2 /* YSCMeController.m in Sources */,
 				93A7ADB61CE9D59400B1C865 /* YSCLrcLabel.m in Sources */,
@@ -970,6 +987,9 @@
 			baseConfigurationReference = BB6B9DBF2A5F89C25836982F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -979,6 +999,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.lianai911.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -987,6 +1008,9 @@
 			baseConfigurationReference = 087ECA595D4DA3B8043DB3A0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -996,6 +1020,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.lianai911.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

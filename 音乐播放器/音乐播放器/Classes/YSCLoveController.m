@@ -28,6 +28,8 @@ static NSString * const YSCLoveCellId = @"loveMusic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setup];
+    
     [self setupTableView];
 
 }
@@ -38,6 +40,16 @@ static NSString * const YSCLoveCellId = @"loveMusic";
      [self loadNewLoveMusics];
 }
 
+- (void)setup
+{
+    // 设置导航栏标题
+    self.navigationItem.title = @"喜  欢";
+    
+    // 设置背景色
+    self.view.backgroundColor = YSCGlobalBg;
+    
+}
+
 - (void)setupTableView
 {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -45,6 +57,7 @@ static NSString * const YSCLoveCellId = @"loveMusic";
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YSCLoveCell class]) bundle:nil] forCellReuseIdentifier:YSCLoveCellId];
 }
+
 - (NSMutableArray *)loveMusics
 {
     if (!_loveMusics) {
@@ -88,7 +101,7 @@ static NSString * const YSCLoveCellId = @"loveMusic";
                     loveMusic.lyric = (BmobFile*)[obj objectForKey:@"lyricFile"];
                     loveMusic.lyricFile = loveMusic.lyric.url;
                     loveMusic.lyric.name = [[NSString alloc] initWithFormat:@"%@.lrc",loveMusic.songId];
-                    
+                    loveMusic.objectId = obj.objectId;
                     [self.loveMusics addObject:loveMusic];
 //                    NSLog(@"%@",loveMusic);
 //                    NSLog(@"%@",self.loveMusics.count);

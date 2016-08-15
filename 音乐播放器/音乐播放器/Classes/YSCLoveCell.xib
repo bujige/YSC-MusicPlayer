@@ -21,7 +21,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t1-jL-AQv" userLabel="歌名">
-                        <rect key="frame" x="106" y="55.5" width="204" height="20.5"/>
+                        <rect key="frame" x="106" y="55" width="204" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -33,9 +33,17 @@
                             <constraint firstAttribute="width" constant="66" id="yTF-Ht-w6G"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5x-uG-sS9">
-                        <rect key="frame" x="247" y="33" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5x-uG-sS9">
+                        <rect key="frame" x="265" y="28" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="6tp-Pe-rbL"/>
+                            <constraint firstAttribute="width" constant="40" id="gfM-lU-W3u"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="收藏" backgroundImage="YSCFavourite">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" title="已收藏" backgroundImage="YSCFavouriteClick"/>
                         <connections>
                             <action selector="cancelFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="28b-GF-2EJ"/>
                         </connections>
@@ -45,7 +53,9 @@
                     <constraint firstItem="UNq-oD-eJE" firstAttribute="top" secondItem="hg1-v0-IlV" secondAttribute="top" id="0EL-NR-bt1"/>
                     <constraint firstItem="9t1-jL-AQv" firstAttribute="bottom" secondItem="hg1-v0-IlV" secondAttribute="bottom" id="7s5-tq-0Xq"/>
                     <constraint firstItem="UNq-oD-eJE" firstAttribute="leading" secondItem="hg1-v0-IlV" secondAttribute="trailing" constant="30" id="CWu-L7-D8z"/>
+                    <constraint firstItem="o5x-uG-sS9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CXi-Xc-vFU"/>
                     <constraint firstItem="9t1-jL-AQv" firstAttribute="trailing" secondItem="UNq-oD-eJE" secondAttribute="trailing" id="SFm-el-rg1"/>
+                    <constraint firstAttribute="trailing" secondItem="o5x-uG-sS9" secondAttribute="trailing" constant="15" id="fg8-SH-N4W"/>
                     <constraint firstAttribute="trailing" secondItem="UNq-oD-eJE" secondAttribute="trailing" constant="10" id="ly2-fd-nmx"/>
                     <constraint firstItem="hg1-v0-IlV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ncH-RO-ILi"/>
                     <constraint firstItem="9t1-jL-AQv" firstAttribute="leading" secondItem="UNq-oD-eJE" secondAttribute="leading" id="pZG-hk-Nkn"/>
@@ -53,6 +63,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="cancelFavoriteBtn" destination="o5x-uG-sS9" id="1Tv-qR-5h0"/>
                 <outlet property="musicImage" destination="hg1-v0-IlV" id="XV1-uo-LZx"/>
                 <outlet property="musicSinger" destination="UNq-oD-eJE" id="cjs-2a-dVq"/>
                 <outlet property="musicTitle" destination="9t1-jL-AQv" id="UZX-4F-AHg"/>
@@ -60,4 +71,8 @@
             <point key="canvasLocation" x="393" y="124"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="YSCFavourite" width="40" height="40"/>
+        <image name="YSCFavouriteClick" width="40" height="40"/>
+    </resources>
 </document>

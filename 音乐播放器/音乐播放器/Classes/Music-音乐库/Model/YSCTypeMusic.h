@@ -36,5 +36,7 @@
 //@property (nonatomic, copy) NSString *singerIcon;  ---songPic
 //@property (nonatomic, copy) NSString *icon;
 
+/** 是否喜欢该歌曲 */
+@property (nonatomic, assign) BOOL isLike;
 
 @end

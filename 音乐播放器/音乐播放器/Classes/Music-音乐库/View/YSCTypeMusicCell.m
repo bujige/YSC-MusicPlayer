@@ -39,12 +39,26 @@
     
     self.musicSinger.text = typeMusic.singer;
     self.musicTitle.text = typeMusic.title;
+    
+    self.favoriteBtn.selected = typeMusic.isLike;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    static CGFloat margin = 10;
+    
+    frame.origin.x = margin;
+    frame.size.width -= 2 * margin;
+    frame.size.height -= margin;
+    frame.origin.y += margin;
+    
+    [super setFrame:frame];
 }
 
 - (IBAction)favorite:(id)sender {

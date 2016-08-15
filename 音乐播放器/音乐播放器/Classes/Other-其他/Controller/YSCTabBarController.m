@@ -34,6 +34,7 @@
     
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:(UIControlStateNormal)];
+    
 
 }
 
@@ -43,7 +44,6 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-//    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     // 在这里更改颜色会加载全部控制器
     //包装一个导航控制器，添加导航控制器为tabbarcontroller的子控制器
     YSCNavigationController *nav = [[YSCNavigationController alloc] initWithRootViewController:vc];
@@ -54,13 +54,13 @@
     [super viewDidLoad];
     
     
-    [self setupChildVc:[[YSCDiscoveryController alloc] init] title:@"发现" image:@"search" selectedImage:@"search"];
+    [self setupChildVc:[[YSCDiscoveryController alloc] init] title:@"发  现" image:@"YSCsearch" selectedImage:@"YSCsearchClick"];
     
-    [self setupChildVc:[[YSCMusicController alloc] init] title:@"音乐库" image:@"home" selectedImage:@"home"];
+    [self setupChildVc:[[YSCMusicController alloc] init] title:@"音乐库" image:@"YSCMusic" selectedImage:@"YSCMusicClick"];
     
-    [self setupChildVc:[[YSCLoveController alloc] init] title:@"喜欢" image:@"favorite" selectedImage:@"favorite"];
+    [self setupChildVc:[[YSCLoveController alloc] init] title:@"喜  欢" image:@"YSCHeart" selectedImage:@"YSCHeartClick"];
     
-    [self setupChildVc:[[YSCMeController alloc] init] title:@"我" image:@"favorite" selectedImage:@"favorite"];
+    [self setupChildVc:[[YSCMeController alloc] init] title:@"我" image:@"YSCMe" selectedImage:@"YSCMeClick"];
 
     
     [self setValue:[[YSCTabBar alloc] init] forKey:@"tabBar"];  

@@ -13,7 +13,11 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self setBackgroundColor:[UIColor greenColor]];
+//        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+        
+        [self setBackgroundColor:[UIColor colorWithRed:44/255.0 green:44/255.0 blue:44/255.0 alpha:1.0]];
+        self.barTintColor = [UIColor colorWithRed:44/255.0 green:44/255.0 blue:44/255.0 alpha:1.0];
+        self.translucent = NO;
     }
     return self;
 }
